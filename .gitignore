@@ -1,42 +1,22 @@
-# Python
+# Django
 *.pyc
 __pycache__/
-.Python
-Python*/
-*.egg-info/
-.pytest_cache/
-.tox/
+db.sqlite3
+
+# Env & secrets
+.env
+.env.*
+
+# Virtual environment
 venv/
-env/
 .venv/
 
-# Django
-*.log
-db.sqlite3 # Залишаємо на випадок, якщо ви переключитеся на SQLite або хтось інший
-media/
-static_root/
-staticfiles/
-
-# IDEs and editors
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
+# OS
 .DS_Store
 
-# OS generated files
-.ipynb_checkpoints/
-.Trashes/
-ehthumbs.db
-Thumbs.db
+# VSCode
+.vscode/
 
-# Environment variables & Sensitive Data (CRITICAL)
-.env                # Файл .env для зберігання змінних середовища
-*.env               # Будь-які файли з розширенням .env
-local_settings.py   # Потенційний файл для локальних налаштувань (НЕ рекомендується для секретів)
-secrets.py          # Потенційний файл для секретів (НЕ рекомендується, краще .env)
-
-# Other
-*.bak
-*.swp
-*~
+# Migrations (за бажанням, якщо не хочеш їх комітити)
+**/migrations/*.py
+!**/migrations/__init__.py
